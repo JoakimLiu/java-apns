@@ -329,6 +329,11 @@ public final class PayloadBuilder {
         return this;
     }
 
+    public PayloadBuilder apnsCustomField(final String key, final Object value) {
+        aps.put(key, value);
+        return this;
+    }
+    
     public PayloadBuilder mdm(final String s) {
         return customField("mdm", s);
     }
